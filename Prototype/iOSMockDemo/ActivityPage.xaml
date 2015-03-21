@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="iOSMockDemo.ActivityPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:iOSMockDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Loaded="Page_Loaded"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <ImageBrush x:Key="Background" ImageSource="/Assets/list.png"/>
+    </Page.Resources>
+
+    <Canvas Background="{StaticResource Background}">
+        <TextBlock Name="UserName" FontFamily="Arial" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="152" Canvas.Top="37"></TextBlock>
+        <ListView Name="DataList"  Foreground="Black" Height="499" Width="378" Canvas.Left="12" Canvas.Top="131">
+            <!--<ListViewItem FontSize="20" Margin="5,10,5,0">Placeholder1</ListViewItem>
+            <ListViewItem FontSize="20" Margin="5,10,5,0">Placeholder2</ListViewItem>
+            <ListViewItem FontSize="20" Margin="5,10,5,0">Placeholder3</ListViewItem>
+            <ListViewItem FontSize="20" Margin="5,10,5,0">Placeholder4</ListViewItem>-->
+        </ListView>
+        <Border Name="Back" Background="#C3CB00" Canvas.Left="12" Canvas.Top="24" Height="41" Width="133" Tapped="Back_Tapped" >
+            <TextBlock VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Foreground="White" Canvas.Left="154" Canvas.Top="126" Margin="11,11,2.333,-13.167" Height="43">Zurück</TextBlock>
+        </Border>
+    </Canvas>
+</Page>

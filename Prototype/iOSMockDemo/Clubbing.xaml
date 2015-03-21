@@ -28,32 +28,32 @@
                 		<Run Text="Coke"/>
                     </TextBlock>
                     <TextBlock Margin="200,0,0,0" FontSize="20" VerticalAlignment="Center">
-                		<Run Text="3CHF"/>
+                		<Run Text="3.00 CHF"/>
                     </TextBlock>
                 </StackPanel>
             </ListBoxItem>
             <ListBoxItem Name="Sprite"  FontFamily="Arial" FontSize="25" Margin="0,0,0,0" Tapped="Sprite_Tapped" >
                 <StackPanel Orientation="Horizontal">
                     <TextBlock>Sprite</TextBlock>
-                    <TextBlock Margin="193,0,0,0" FontSize="20" VerticalAlignment="Center">3CHF</TextBlock>
+                    <TextBlock Margin="193,0,0,0" FontSize="20" VerticalAlignment="Center">3.00 CHF</TextBlock>
                 </StackPanel>
             </ListBoxItem>
             <ListBoxItem Name="Beer" FontFamily="Arial" FontSize="25" Margin="0,2,0,0" Tapped="Beer_Tapped">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock>Beer</TextBlock>
-                    <TextBlock Margin="206,0,0,0" FontSize="20" VerticalAlignment="Center">4CHF</TextBlock>
+                    <TextBlock Margin="206,0,0,0" FontSize="20" VerticalAlignment="Center">4.00 CHF</TextBlock>
                 </StackPanel>
             </ListBoxItem>
             <ListBoxItem FontFamily="Arial" FontSize="25" Margin="0,2,0,0">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock>Coffee</TextBlock>
-                    <TextBlock Margin="185,0,0,0" FontSize="20" VerticalAlignment="Center">2CHF</TextBlock>
+                    <TextBlock Margin="185,0,0,0" FontSize="20" VerticalAlignment="Center">2.00 CHF</TextBlock>
                 </StackPanel>
             </ListBoxItem>
             <ListBoxItem FontFamily="Arial" FontSize="25" Margin="0,2,0,0">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock>Cappuccino</TextBlock>
-                    <TextBlock Margin="126,0,0,0" FontSize="20" VerticalAlignment="Center">4CHF</TextBlock>
+                    <TextBlock Margin="126,0,0,0" FontSize="20" VerticalAlignment="Center">4.00 CHF</TextBlock>
                 </StackPanel>
             </ListBoxItem>
         </ListView>

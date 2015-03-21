@@ -18,7 +18,7 @@
             <TextBlock VerticalAlignment="Center" FontFamily="Arial" FontSize="20" Foreground="White" Canvas.Left="154" Canvas.Top="126" Width="216" Margin="13,11,-9.833,6" Height="43">Face club</TextBlock>
         </Border>
         <Border Background="#496E82" Canvas.Left="136" Canvas.Top="107" Height="60" Width="233">
-            <TextBlock VerticalAlignment="Center" FontFamily="Arial" FontSize="20" Foreground="White" Canvas.Left="154" Canvas.Top="126" Width="216" Margin="12,11,5.333,6" Height="43">10</TextBlock>
+            <TextBlock VerticalAlignment="Center" FontFamily="Arial" FontSize="20" Foreground="White" Canvas.Left="154" Canvas.Top="126" Width="216" Margin="12,11,5.333,6" Height="43">10.00 </TextBlock>
         </Border>
         <Border Name="OrderButton" Background="Transparent" Canvas.Left="157" Canvas.Top="33" Height="38" Width="116" Tapped="OrderButton_Tapped"/>
     </Canvas>

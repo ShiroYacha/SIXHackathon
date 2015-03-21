@@ -57,11 +57,17 @@ namespace iOSMockDemo
             string numberUser1 = "+41333333333";
             string numberUser2 = "+41333333334";
             string numberUser3 = "+41333333335";
+            string numberHeidi = "+41333333339";
+            string numberVreni = "+41333333340";
+            string numberPeter = "+41333333341";
             var user = Clubbing.user;
             var bar = Clubbing.bar;
             var user1 = Clubbing.user1;
             var user2 = Clubbing.user2;
             var user3 = Clubbing.user3;
+            var heidi = Circle.heidi;
+            var vreni = Circle.vreni;
+            var peter = Circle.peter;
             if (!user.SetupDone)
             {
                 await user.Signin(numberUser, "Peter", "Krumer");
@@ -87,7 +93,21 @@ namespace iOSMockDemo
                 await user3.Signin(numberUser3, "David", "Beckham");
                 await user3.SetupCreditCard("1235223512341234");
             }
-
+            if (!heidi.SetupDone)
+            {
+                await heidi.Signin(numberHeidi, "Heidi", "Neuer");
+                await heidi.SetupCreditCard("1252233672341234");
+            }
+            if (!vreni.SetupDone)
+            {
+                await vreni.Signin(numberVreni, "Vreni", "Cris");
+                await vreni.SetupCreditCard("1235003412355234");
+            }
+            if (!peter.SetupDone)
+            {
+                await peter.Signin(numberPeter, "Peter", "Neuer");
+                await peter.SetupCreditCard("1235773512341234");
+            }
         }
     }
 }

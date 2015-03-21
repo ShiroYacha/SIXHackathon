@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="iOSMockDemo.CircleRequest"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:iOSMockDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <ImageBrush x:Key="Background" ImageSource="/Assets/confirm.png"/>
+    </Page.Resources>
+    <Canvas Background="{StaticResource Background}" Loaded="Canvas_Loaded">
+        <Border Name="Back" Background="#C3CB00" Canvas.Left="8" Canvas.Top="25" Height="41" Width="144" Tapped="Back_Tapped">
+            <TextBlock VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Foreground="White" Canvas.Left="154" Canvas.Top="126" Margin="19,12,-5.833,-14.167" Height="43">Zurück</TextBlock>
+        </Border>
+        <Border Name="Accept" Background="#496E82" Canvas.Left="10" Canvas.Top="86" Height="41" Width="144" Tapped="Accept_Tapped">
+            <TextBlock VerticalAlignment="Top" FontFamily="Arial" FontSize="25" Foreground="White" Canvas.Left="154" Canvas.Top="126" Margin="19,12,-5.833,-14.167" Height="43">Akzeptieren</TextBlock>
+        </Border>
+        <Border Name="Reject" Background="#496E82" Canvas.Left="246" Canvas.Top="86" Height="41" Width="144" Tapped="Reject_Tapped">
+            <TextBlock VerticalAlignment="Top" FontFamily="Arial" FontSize="25" Foreground="White" Canvas.Left="154" Canvas.Top="126" Margin="19,12,-5.833,-14.167" Height="43">Ablehnen</TextBlock>
+        </Border>
+    </Canvas>
+</Page>

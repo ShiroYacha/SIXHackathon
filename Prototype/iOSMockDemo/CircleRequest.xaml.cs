@@ -20,9 +20,9 @@ namespace iOSMockDemo
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class AddonPage : Page
+    public sealed partial class CircleRequest : Page
     {
-        public AddonPage()
+        public CircleRequest()
         {
             this.InitializeComponent();
         }
@@ -36,30 +36,36 @@ namespace iOSMockDemo
         {
         }
 
-        private void ShoppingCircleButton_Tapped(object sender, TappedRoutedEventArgs e)
+        private void Canvas_Loaded(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Circle));
-        }
-
-        private void ParkingButton_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(ParkingPreview));
-        }
-
-        private void ClubbingButton_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(Clubbing));
-        }
-
-        private void BackButton_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(MainPage));
 
         }
 
         private void Back_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage));
+            Frame.Navigate(typeof(ActivityPage));
+        }
+
+        private async void Accept_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            //var heidi = Circle.heidi;
+            //var trans = await heidi.GetTransactions();
+            //var item1 = trans.FirstOrDefault(t=>t.status == "4" && t.type == "4");
+            //if (item1 != null)
+            //    await heidi.AcceptRequestFrom(item1.id);
+            ActivityPage.status = 1;
+            Frame.Navigate(typeof(ActivityPage));
+        }
+
+        private async void Reject_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            //var heidi = Circle.heidi;
+            //var trans = await heidi.GetTransactions();
+            //var item1 = trans.FirstOrDefault(t => t.status == "4" && t.type == "4");
+            //if (item1 != null)
+            //    await heidi.RejectRequestFrom(item1.id);
+            ActivityPage.status = 0;
+            Frame.Navigate(typeof(ActivityPage));
         }
     }
 }

@@ -17,7 +17,7 @@
             <TextBlock VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Foreground="White" Canvas.Left="154" Canvas.Top="126" Margin="11,11,2.333,-13.167" Height="43">Zurück</TextBlock>
         </Border>
         <ProgressRing Name="Progress" Background="Transparent" Visibility="Visible" IsActive="True" Canvas.Left="164" Canvas.Top="311" Height="80" Width="80"/>
-        <TextBlock FontFamily="Arial" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="152" Canvas.Top="86">Beendet</TextBlock>
+        <TextBlock FontFamily="Arial" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="152" Canvas.Top="86" Tapped="TextBlock_Tapped">Beendet</TextBlock>
         <TextBlock Name="Request"  TextAlignment="Center" Visibility="Visible" Text="Die Anfragen wurden versendet." FontFamily="Arial" FontSize="23" TextWrapping="Wrap" Foreground="Black" Height="63" Canvas.Left="43" Canvas.Top="162" Width="332"/>
         <Canvas Name="StatusCanvus" Visibility="Collapsed">
             <TextBlock Name="User1Name"  FontFamily="Arial" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="43" Canvas.Top="225" Text="User 1"/>

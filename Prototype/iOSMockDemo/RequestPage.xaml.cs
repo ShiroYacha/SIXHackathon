@@ -76,5 +76,10 @@ namespace iOSMockDemo
                 requested = true;
             }
         }
+
+        private void TextBlock_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AddonPage));
+        }
     }
 }
