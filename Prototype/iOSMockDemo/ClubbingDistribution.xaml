@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="iOSMockDemo.ClubbingDistribution"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:iOSMockDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <ImageBrush x:Key="Background" ImageSource="/Assets/p2p_add_ons.png"/>
+    </Page.Resources>
+    <Canvas Background="{StaticResource Background}">
+        
+    </Canvas>
+        
+</Page>

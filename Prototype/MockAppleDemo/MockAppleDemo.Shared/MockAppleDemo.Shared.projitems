@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>a40b580f-fc2a-4232-89aa-82f6eb762f12</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>MockAppleDemo</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\image.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\image_1.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\image_2.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\image_3.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\image_4.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\image_5.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\image_6.png" />
+  </ItemGroup>
+</Project>

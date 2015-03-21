@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="iOSMockDemo.ContactPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:iOSMockDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <ImageBrush x:Key="Background" ImageSource="/Assets/list.png"/>
+    </Page.Resources>
+
+    <Canvas Background="{StaticResource Background}">
+        <TextBlock FontFamily="Arial" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="152" Canvas.Top="37">Kontactet</TextBlock>
+
+        <ListView Name="ContactList" FontSize="50" Foreground="Black" HorizontalAlignment="Center" Canvas.Left="24" Canvas.Top="136">
+            <ListViewItem Name="ManualListViewItem" Margin="0" FontSize="25" Tapped="ManualListViewItem_Tapped">Manual</ListViewItem>
+            <ListViewItem Name="OliverListViewItem" Margin="0,8,0,0" FontSize="25" Tapped="OliverListViewItem_Tapped">Oliver</ListViewItem>
+            <ListViewItem Name="MarcListViewItem" Margin="0,9,0,0"  FontSize="25" Tapped="MarcListViewItem_Tapped">Marc</ListViewItem>
+            <ListViewItem Name="DavidListViewItem" Margin="0,9,0,0" FontSize="25" Tapped="DavidListViewItem_Tapped">David</ListViewItem>
+        </ListView>
+    </Canvas>
+</Page>

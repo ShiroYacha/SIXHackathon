@@ -1,0 +1,49 @@
+﻿<Page
+    x:Class="iOSMockDemo.SharePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:iOSMockDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <ImageBrush x:Key="Background" ImageSource="/Assets/bg_contact.png"/>
+    </Page.Resources>
+    <Canvas Background="{StaticResource Background}">
+        <Border Name="RequestButton" Background="Transparent" Canvas.Left="54" Canvas.Top="76" Height="49" Width="293" Tapped="RequestButton_Tapped">
+            <TextBlock FontFamily="Arial" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center">Anfrage</TextBlock>
+        </Border>
+        <TextBlock Name="CokeName" Visibility="Collapsed" FontFamily="Arial" FontSize="25" Text="Mammel" Foreground="Black" Canvas.Left="287" Canvas.Top="141"/>
+        <TextBlock Name="SpriteName" Visibility="Collapsed" FontFamily="Arial" FontSize="25" Text="Oliver" Foreground="Black" Canvas.Left="289" Canvas.Top="189"/>
+        <TextBlock Name="BeerName" Visibility="Collapsed" FontFamily="Arial" FontSize="25" Text="Marc" Foreground="Black" Canvas.Left="291" Canvas.Top="241"/>
+        <Border Name="CokeContact" Canvas.Left="298" Canvas.Top="129" Height="49" Width="76" Tapped="CokeContact_Tapped">
+            <Image Source="/Assets/head.png" Margin="10,2,7.833,8.167"/>
+        </Border>
+        <Border Name="SpriteContact" Canvas.Left="300" Canvas.Top="180" Height="49" Width="76" Tapped="SpriteContact_Tapped">
+            <Image  Source="/Assets/head.png" Margin="10,2,7.833,8.167"/>
+        </Border>
+        <Border Name="BeerContact" Canvas.Left="300" Canvas.Top="233" Height="49" Width="76" Tapped="BeerContact_Tapped">
+            <Image  Source="/Assets/head.png" Margin="10,0,7.833,10.167"/>
+        </Border>
+        <ListView FontSize="50" Foreground="Black" Canvas.Left="30" Canvas.Top="135" Height="419" Width="268">
+            <ListBoxItem FontFamily="Arial" FontSize="25" Margin="0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>
+                		<Run Text="Coke"/>
+                    </TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem FontFamily="Arial" FontSize="25" Margin="0,0,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>Sprite</TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem FontFamily="Arial" FontSize="25" Margin="0,5,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>Beer</TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+        </ListView>
+    </Canvas>
+</Page>

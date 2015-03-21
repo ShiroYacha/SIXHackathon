@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="iOSMockDemo.RequestPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:iOSMockDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
+    <Page.Resources>
+        <ImageBrush x:Key="Background" ImageSource="/Assets/bg.png"/>
+    </Page.Resources>
+    <Canvas Background="{StaticResource Background}">
+        <TextBlock FontFamily="Arial" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="152" Canvas.Top="86">Beendet</TextBlock>
+        <TextBlock TextAlignment="Center" Text="Die Anfragen wurden versendet." FontFamily="Arial" FontSize="16" TextWrapping="Wrap" Foreground="Black" Height="63" Canvas.Left="30" Canvas.Top="280" Width="332"/>
+    </Canvas>
+</Page>

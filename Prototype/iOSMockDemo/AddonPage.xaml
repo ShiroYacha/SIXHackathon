@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="iOSMockDemo.AddonPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:iOSMockDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <ImageBrush x:Key="Background" ImageSource="/Assets/add_ons.png"/>
+    </Page.Resources>
+    <Canvas Background="{StaticResource Background}" Margin="0,-20,0,0">
+        <Border Name="ShoppingCircleButton" Height="87" Background="Transparent" Width="400" Canvas.Top="125" Tapped="ShoppingCircleButton_Tapped"/>
+        <Border Name="ParkingButton" Height="87" Background="Transparent" Width="400" Canvas.Top="216" Tapped="ParkingButton_Tapped"/>
+        <Border Name="ClubbingButton" Height="87" Background="Transparent" Width="400" Canvas.Top="308" Tapped="ClubbingButton_Tapped"/>
+        <Border Name="BackButton" Height="57" Background="Transparent" Width="90" Canvas.Top="69" Tapped="BackButton_Tapped"/>
+    </Canvas>
+</Page>
