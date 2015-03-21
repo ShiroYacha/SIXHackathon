@@ -54,7 +54,6 @@ namespace iOSMockDemo
         {
             SharePage.Name = "Marc";
             Frame.Navigate(typeof(SharePage));
-
         }
 
         private void DavidListViewItem_Tapped(object sender, TappedRoutedEventArgs e)
@@ -62,6 +61,11 @@ namespace iOSMockDemo
             SharePage.Name = "David";
             Frame.Navigate(typeof(SharePage));
 
+        }
+
+        private void Back_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(SharePage));
         }
     }
 }

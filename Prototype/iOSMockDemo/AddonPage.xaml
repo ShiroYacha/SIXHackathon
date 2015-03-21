@@ -12,9 +12,11 @@
         <ImageBrush x:Key="Background" ImageSource="/Assets/add_ons.png"/>
     </Page.Resources>
     <Canvas Background="{StaticResource Background}" Margin="0,-20,0,0">
-        <Border Name="ShoppingCircleButton" Height="87" Background="Transparent" Width="400" Canvas.Top="125" Tapped="ShoppingCircleButton_Tapped"/>
-        <Border Name="ParkingButton" Height="87" Background="Transparent" Width="400" Canvas.Top="216" Tapped="ParkingButton_Tapped"/>
+        <Border Name="Back" Background="#C3CB00" Canvas.Left="12" Canvas.Top="24" Height="41" Width="133" Tapped="Back_Tapped" >
+            <TextBlock VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Foreground="White" Canvas.Left="154" Canvas.Top="126" Margin="11,11,2.333,-13.167" Height="43">Zurück</TextBlock>
+        </Border>
+        <Border Name="ShoppingCircleButton" Height="87" Background="Transparent" Width="400" Canvas.Top="125" />
+        <Border Name="ParkingButton" Height="87" Background="Transparent" Width="400" Canvas.Top="216" />
         <Border Name="ClubbingButton" Height="87" Background="Transparent" Width="400" Canvas.Top="308" Tapped="ClubbingButton_Tapped"/>
-        <Border Name="BackButton" Height="57" Background="Transparent" Width="90" Canvas.Top="69" Tapped="BackButton_Tapped"/>
     </Canvas>
 </Page>

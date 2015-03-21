@@ -49,5 +49,45 @@ namespace iOSMockDemo
         {
             Frame.Navigate(typeof(AddonPage));
         }
+
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            string numberUser = "+41333333331";
+            string numberBar = "+41333333332";
+            string numberUser1 = "+41333333333";
+            string numberUser2 = "+41333333334";
+            string numberUser3 = "+41333333335";
+            var user = Clubbing.user;
+            var bar = Clubbing.bar;
+            var user1 = Clubbing.user1;
+            var user2 = Clubbing.user2;
+            var user3 = Clubbing.user3;
+            if (!user.SetupDone)
+            {
+                await user.Signin(numberUser, "Peter", "Krumer");
+                await user.SetupCreditCard("1235233412231234");
+            }
+            if (!bar.SetupDone)
+            {
+                await bar.Signin(numberBar, "Faceclub", "");
+                await bar.SetupCreditCard("1288233412341234");
+            }
+            if (!user1.SetupDone)
+            {
+                await user1.Signin(numberUser1, "Manuel", "Neuer");
+                await user1.SetupCreditCard("1235233362341234");
+            }
+            if (!user2.SetupDone)
+            {
+                await user2.Signin(numberUser2, "Marc", "Faber");
+                await user2.SetupCreditCard("1235233412355234");
+            }
+            if (!user3.SetupDone)
+            {
+                await user3.Signin(numberUser3, "David", "Beckham");
+                await user3.SetupCreditCard("1235223512341234");
+            }
+
+        }
     }
 }

@@ -36,9 +36,18 @@ namespace iOSMockDemo
         {
         }
 
-        private void OrderButton_Tapped(object sender, TappedRoutedEventArgs e)
+        private async void OrderButton_Tapped(object sender, TappedRoutedEventArgs e)
         {
             Frame.Navigate(typeof(PaymentPage));
+            // mockup order to enforce animation fluency (need refactoring)
+            var user = Clubbing.user;
+            var bar = Clubbing.bar;
+            await user.SendMoneyTo(bar.mobile, "10");
+        }
+
+        private void Back_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Clubbing));
         }
     }
 }

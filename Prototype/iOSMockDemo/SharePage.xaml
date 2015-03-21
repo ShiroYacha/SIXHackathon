@@ -11,6 +11,9 @@
         <ImageBrush x:Key="Background" ImageSource="/Assets/bg_contact.png"/>
     </Page.Resources>
     <Canvas Background="{StaticResource Background}">
+        <Border Name="Back" Background="#C3CB00" Canvas.Left="12" Canvas.Top="24" Height="41" Width="133" Tapped="Back_Tapped" >
+            <TextBlock VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Foreground="White" Canvas.Left="154" Canvas.Top="126" Margin="11,11,2.333,-13.167" Height="43">Zurück</TextBlock>
+        </Border>
         <Border Name="RequestButton" Background="Transparent" Canvas.Left="54" Canvas.Top="76" Height="49" Width="293" Tapped="RequestButton_Tapped">
             <TextBlock FontFamily="Arial" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center">Anfrage</TextBlock>
         </Border>

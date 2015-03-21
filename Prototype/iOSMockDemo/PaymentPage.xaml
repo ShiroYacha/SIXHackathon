@@ -6,16 +6,21 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    Loaded="Page_Loaded"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    <Page.Resources>
+    
+    <Page.Resources >
         <ImageBrush x:Key="Background" ImageSource="/Assets/bg.png"/>
     </Page.Resources>
-    <Canvas Background="{StaticResource Background}">
+    <Canvas Background="{StaticResource Background}" Loaded="Canvas_Loaded">
+        <Border Name="Back" Background="#C3CB00" Canvas.Left="12" Canvas.Top="24" Height="41" Width="133" Tapped="Back_Tapped" >
+            <TextBlock VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Foreground="White" Canvas.Left="154" Canvas.Top="126" Margin="11,11,2.333,-13.167" Height="43">Zurück</TextBlock>
+        </Border>
         <Border Name="ShareButton" Background="Transparent" Canvas.Left="82" Canvas.Top="81" Height="41" Width="242" Tapped="ShareButton_Tapped">
             <TextBlock FontFamily="Arial" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center">Teilen</TextBlock>
         </Border>
         <StackPanel/>
-        <TextBlock Text="Die Rechnung wurde bezahlt." TextAlignment="Center" FontFamily="Arial" FontSize="20" TextWrapping="Wrap" Foreground="Black" Height="63" Canvas.Left="43" Canvas.Top="280" Width="332"/>
+        <ProgressRing Name="Progress" Background="Transparent" Visibility="Collapsed" IsActive="False" Canvas.Left="168" Canvas.Top="257" Height="80" Width="80"/>
+        <TextBlock Name="Result" Visibility="Collapsed" Text="Die Rechnung wurde bezahlt." TextAlignment="Center" FontFamily="Arial" FontSize="23" TextWrapping="Wrap" Foreground="Black" Height="63" Canvas.Left="43" Canvas.Top="280" Width="332"/>
     </Canvas>
 </Page>

@@ -6,13 +6,26 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Loaded="Page_Loaded">
+
     <Page.Resources>
         <ImageBrush x:Key="Background" ImageSource="/Assets/bg.png"/>
     </Page.Resources>
     <Canvas Background="{StaticResource Background}">
+        <Border Name="Back" Background="#C3CB00" Canvas.Left="12" Canvas.Top="24" Height="41" Width="133" Tapped="Back_Tapped" >
+            <TextBlock VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Foreground="White" Canvas.Left="154" Canvas.Top="126" Margin="11,11,2.333,-13.167" Height="43">Zurück</TextBlock>
+        </Border>
+        <ProgressRing Name="Progress" Background="Transparent" Visibility="Visible" IsActive="True" Canvas.Left="164" Canvas.Top="311" Height="80" Width="80"/>
         <TextBlock FontFamily="Arial" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="152" Canvas.Top="86">Beendet</TextBlock>
-        <TextBlock TextAlignment="Center" Text="Die Anfragen wurden versendet." FontFamily="Arial" FontSize="16" TextWrapping="Wrap" Foreground="Black" Height="63" Canvas.Left="30" Canvas.Top="280" Width="332"/>
+        <TextBlock Name="Request"  TextAlignment="Center" Visibility="Visible" Text="Die Anfragen wurden versendet." FontFamily="Arial" FontSize="23" TextWrapping="Wrap" Foreground="Black" Height="63" Canvas.Left="43" Canvas.Top="162" Width="332"/>
+        <Canvas Name="StatusCanvus" Visibility="Collapsed">
+            <TextBlock Name="User1Name"  FontFamily="Arial" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="43" Canvas.Top="225" Text="User 1"/>
+            <TextBlock Name="User2Name"  FontFamily="Arial" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="43" Canvas.Top="267" Text="User 2"/>
+            <TextBlock Name="User3Name"  FontFamily="Arial" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="43" Canvas.Top="308" Text="User 3"/>
+            <TextBlock Name="User1Status"  FontFamily="Arial" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="174" Canvas.Top="225" Text="... pending" Foreground="Orange"/>
+            <TextBlock Name="User2Status"  FontFamily="Arial" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="174" Canvas.Top="267" Text="... pending"  Foreground="Orange"/>
+            <TextBlock Name="User3Status"  FontFamily="Arial" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="175" Canvas.Top="312" Text="... pending"  Foreground="Orange"/>
+        </Canvas>
     </Canvas>
 </Page>

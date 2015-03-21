@@ -12,8 +12,25 @@ namespace Data
     {
         private string userToken;
 
-        public async Task Signin(string phoneNumber)
+        public string mobile;
+        public string name;
+        public string lastname;
+
+        private bool setup=false;
+
+        public bool SetupDone
         {
+            get
+            {
+                return setup;
+            }
+        }
+
+        public async Task Signin(string phoneNumber,string name, string lastname)
+        {
+            this.mobile = phoneNumber;
+            this.name = name;
+            this.lastname = lastname;
             JObject results;
             HttpHeaders headers;
             // sign in
@@ -26,7 +43,7 @@ namespace Data
                 // register 
                 GetResponseAndHeaders(await SendAsync(HttpMethod.Get, DataTokens.SIGNIN_TOKEN + DataTokens.REGISTER_TOKEN + smscode + @"/", null, "sessiontoken", sessiontoken), out results, out headers);
                 string registrationtoken = headers.GetValues("registrationtoken").FirstOrDefault();
-                var body = new { firstname = "jim", lastname = "tim", email = "tim.jim@gmail.com", pin = "1234" };
+                var body = new { firstname = name, lastname = lastname, email = "tim.jim@gmail.com", pin = "1234" };
                 GetResponseAndHeaders(await SendAsync(HttpMethod.Put, DataTokens.SIGNIN_TOKEN + DataTokens.REGISTER_TOKEN + DataTokens.FINISH_TOKEN, body, "registrationtoken", registrationtoken), out results, out headers);
                 userToken = headers.GetValues("usertoken").FirstOrDefault();
             }
@@ -50,6 +67,7 @@ namespace Data
                 var body = new { number = creditNumber, preferred = "true", expiration = "04/15", code = "123" };
                 GetResponseAndHeaders(await SendAsync(HttpMethod.Put, DataTokens.CREDITCARD_TOKEN, body, "usertoken", userToken), out results, out headers);
             }
+            setup = true;
         }
 
         public async Task SendMoneyTo(string phoneNumber, string amount,string comment="",string image="")
@@ -65,7 +83,6 @@ namespace Data
             var body = new { phoneNumber = phoneNumber, amount = amount, loadAmount = amount, creditCardId = creditId, loadFee = "0", comment = comment, image = image };
             GetResponseAndHeaders(await SendAsync(HttpMethod.Put, DataTokens.BALANCE_TOKEN + DataTokens.TRANSACTION_TOKEN + DataTokens.SEND_TOKEN, body, "usertoken", userToken), out results, out headers);
         }
-
 
         public async Task RequestMoneyFrom(string phoneNumber, string amount, string comment = "", string image = "")
         {
@@ -114,7 +131,7 @@ namespace Data
             var creditCard = creditCardTemp.TrimStart('[').TrimEnd(']');
             var creditId = (JObject.Parse(creditCard))["id"];
             // send
-            var body = new { loadAmount = "999", creditCardId = creditId, loadFee = "0" };
+            var body = new { loadAmount = "10", creditCardId = creditId, loadFee = "0" };
             GetResponseAndHeaders(await SendAsync(HttpMethod.Post, DataTokens.ACTIVITY_TOKEN + DataTokens.ACCEPT_TOKEN + transId + @"/", body, "usertoken", userToken), out results, out headers);
         }
 

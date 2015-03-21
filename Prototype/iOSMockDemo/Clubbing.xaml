@@ -6,19 +6,23 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    Loaded="Page_Loaded"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Page.Resources>
         <ImageBrush x:Key="Background" ImageSource="/Assets/bg_contact.png"/>
     </Page.Resources>
-    <Canvas Background="{StaticResource Background}">
+    <Canvas Background="{StaticResource Background}" >
+        <Border Name="Back" Background="#C3CB00" Canvas.Left="12" Canvas.Top="24" Height="41" Width="133" Tapped="Back_Tapped" >
+            <TextBlock VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Foreground="White" Canvas.Left="154" Canvas.Top="126" Margin="11,11,2.333,-13.167" Height="43">Zurück</TextBlock>
+        </Border>
         <Ellipse Width="35" Height="35" Fill="White" Stroke="Transparent" Canvas.Left="350" Canvas.Top="23"/>
         <TextBlock Name="NumDrinks" Foreground="Green" Canvas.ZIndex="4" FontSize="20" FontFamily="Arial" Text="0" Canvas.Left="363" Canvas.Top="29"/>
         <Border Name="Order" Background="#496E82" Height="47" Width="311" Canvas.Left="51" Canvas.Top="74" Tapped="Order_Tapped">
             <TextBlock FontFamily="Arial" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center">Bestellung</TextBlock>
         </Border>
 
-        <ListView Foreground="Black" Canvas.Left="25" Canvas.Top="142" Height="419" Width="365" Tapped="ListView_Tapped">
-            <ListBoxItem FontFamily="Arial" FontSize="25" Margin="0">
+        <ListView Foreground="Black" Canvas.Left="25" Canvas.Top="142" Height="419" Width="365">
+            <ListBoxItem Name="Coke"  FontFamily="Arial" FontSize="25" Margin="0" Tapped="Coke_Tapped">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock>
                 		<Run Text="Coke"/>
@@ -28,13 +32,13 @@
                     </TextBlock>
                 </StackPanel>
             </ListBoxItem>
-            <ListBoxItem FontFamily="Arial" FontSize="25" Margin="0,0,0,0">
+            <ListBoxItem Name="Sprite"  FontFamily="Arial" FontSize="25" Margin="0,0,0,0" Tapped="Sprite_Tapped" >
                 <StackPanel Orientation="Horizontal">
                     <TextBlock>Sprite</TextBlock>
                     <TextBlock Margin="193,0,0,0" FontSize="20" VerticalAlignment="Center">3CHF</TextBlock>
                 </StackPanel>
             </ListBoxItem>
-            <ListBoxItem FontFamily="Arial" FontSize="25" Margin="0,2,0,0">
+            <ListBoxItem Name="Beer" FontFamily="Arial" FontSize="25" Margin="0,2,0,0" Tapped="Beer_Tapped">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock>Beer</TextBlock>
                     <TextBlock Margin="206,0,0,0" FontSize="20" VerticalAlignment="Center">4CHF</TextBlock>

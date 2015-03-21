@@ -12,10 +12,13 @@
     </Page.Resources>
 
     <Canvas Background="{StaticResource Background}">
+        <Border Name="Back" Background="#C3CB00" Canvas.Left="12" Canvas.Top="24" Height="41" Width="133" Tapped="Back_Tapped" >
+            <TextBlock VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Foreground="White" Canvas.Left="154" Canvas.Top="126" Margin="11,11,2.333,-13.167" Height="43">Zurück</TextBlock>
+        </Border>
         <TextBlock FontFamily="Arial" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="152" Canvas.Top="37">Kontactet</TextBlock>
 
         <ListView Name="ContactList" FontSize="50" Foreground="Black" HorizontalAlignment="Center" Canvas.Left="24" Canvas.Top="136">
-            <ListViewItem Name="ManualListViewItem" Margin="0" FontSize="25" Tapped="ManualListViewItem_Tapped">Manual</ListViewItem>
+            <ListViewItem Name="ManualListViewItem" Margin="0" FontSize="25" Tapped="ManualListViewItem_Tapped" Width="355">Manual</ListViewItem>
             <ListViewItem Name="OliverListViewItem" Margin="0,8,0,0" FontSize="25" Tapped="OliverListViewItem_Tapped">Oliver</ListViewItem>
             <ListViewItem Name="MarcListViewItem" Margin="0,9,0,0"  FontSize="25" Tapped="MarcListViewItem_Tapped">Marc</ListViewItem>
             <ListViewItem Name="DavidListViewItem" Margin="0,9,0,0" FontSize="25" Tapped="DavidListViewItem_Tapped">David</ListViewItem>

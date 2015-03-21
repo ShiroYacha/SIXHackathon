@@ -99,5 +99,10 @@ namespace iOSMockDemo
         {
 
         }
+
+        private void Back_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(PaymentPage));
+        }
     }
 }

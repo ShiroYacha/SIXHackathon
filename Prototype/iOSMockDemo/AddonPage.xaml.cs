@@ -56,5 +56,10 @@ namespace iOSMockDemo
             Frame.Navigate(typeof(MainPage));
 
         }
+
+        private void Back_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
     }
 }

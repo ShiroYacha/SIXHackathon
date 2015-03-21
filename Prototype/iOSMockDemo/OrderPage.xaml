@@ -11,6 +11,9 @@
         <ImageBrush x:Key="Background" ImageSource="/Assets/image_1.png"/>
     </Page.Resources>
     <Canvas Background="{StaticResource Background}">
+        <Border Name="Back" Background="#C3CB00" Canvas.Left="8" Canvas.Top="25" Height="41" Width="144" Tapped="Back_Tapped">
+            <TextBlock VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Foreground="White" Canvas.Left="154" Canvas.Top="126" Margin="19,12,-5.833,-14.167" Height="43">Zurück</TextBlock>
+        </Border>
         <Border Background="#496E82" Canvas.Left="136" Canvas.Top="71" Height="60" Width="212">
             <TextBlock VerticalAlignment="Center" FontFamily="Arial" FontSize="20" Foreground="White" Canvas.Left="154" Canvas.Top="126" Width="216" Margin="13,11,-9.833,6" Height="43">Face club</TextBlock>
         </Border>

@@ -34,9 +34,9 @@ namespace P2PTestApp
         {
             string number1="+41799123423";
             string number2="+41799126223";
-            await client1.Signin(number1);
+            await client1.Signin(number1,"terst","set");
             await client1.SetupCreditCard("1235233412341234");
-            await client2.Signin(number2);
+            await client2.Signin(number2,"weterst","set");
             await client2.SetupCreditCard("1123142123412434");
             await client1.SendMoneyTo(number2, "20","1");
             await client1.RequestMoneyFrom(number2,"60");

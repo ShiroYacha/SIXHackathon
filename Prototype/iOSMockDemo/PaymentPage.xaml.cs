@@ -22,6 +22,7 @@ namespace iOSMockDemo
     /// </summary>
     public sealed partial class PaymentPage : Page
     {
+        private static bool amountSent = false;
         public PaymentPage()
         {
             this.InitializeComponent();
@@ -32,13 +33,39 @@ namespace iOSMockDemo
         /// </summary>
         /// <param name="e">Event data that describes how this page was reached.
         /// This parameter is typically used to configure the page.</param>
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
+            await System.Threading.Tasks.Task.Delay(TimeSpan.FromSeconds(100));
         }
 
         private void ShareButton_Tapped(object sender, TappedRoutedEventArgs e)
         {
             Frame.Navigate(typeof(SharePage));
+        }
+
+        private void Back_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(OrderPage));
+        }
+
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (!amountSent)
+            {
+                Progress.IsActive = true;
+                Progress.Visibility = Visibility.Visible;
+                await System.Threading.Tasks.Task.Delay(TimeSpan.FromSeconds(0.5));                
+                Progress.IsActive = false;
+                Progress.Visibility = Visibility.Collapsed;
+                Result.Visibility = Visibility.Visible;
+                //make sure does not resend
+                amountSent = true;
+            }
+        }
+
+        private async void Canvas_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
