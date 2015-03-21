@@ -19,6 +19,9 @@
         <Border Name="ShareButton" Background="Transparent" Canvas.Left="82" Canvas.Top="81" Height="41" Width="242" Tapped="ShareButton_Tapped">
             <TextBlock FontFamily="Arial" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center">Teilen</TextBlock>
         </Border>
+        <Border Name="InviteButton" Background="Transparent" Canvas.Left="82" Canvas.Top="81" Height="41" Width="242" Tapped="ShareButton_Tapped">
+            <TextBlock FontFamily="Arial" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center">Teilen</TextBlock>
+        </Border>        
         <StackPanel/>
         <ProgressRing Name="Progress" Background="Transparent" Visibility="Collapsed" IsActive="False" Canvas.Left="168" Canvas.Top="257" Height="80" Width="80"/>
         <TextBlock Name="Result" Visibility="Collapsed" Text="Die Rechnung wurde bezahlt." TextAlignment="Center" FontFamily="Arial" FontSize="23" TextWrapping="Wrap" Foreground="Black" Height="63" Canvas.Left="43" Canvas.Top="280" Width="332"/>

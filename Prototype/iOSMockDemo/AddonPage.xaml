@@ -12,6 +12,8 @@
         <ImageBrush x:Key="Background" ImageSource="/Assets/add_ons.png"/>
     </Page.Resources>
     <Canvas Background="{StaticResource Background}" Margin="0,-20,0,0">
+        <Ellipse Name="PeterMeter" Fill="Red" Stroke="Red" Height="15" Canvas.Left="22"  Canvas.Top="169" Width="15"/>
+
         <Border Name="Back" Background="#C3CB00" Canvas.Left="12" Canvas.Top="24" Height="41" Width="133" Tapped="Back_Tapped" >
             <TextBlock VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Foreground="White" Canvas.Left="154" Canvas.Top="126" Margin="11,11,2.333,-13.167" Height="43">Zurück</TextBlock>
         </Border>

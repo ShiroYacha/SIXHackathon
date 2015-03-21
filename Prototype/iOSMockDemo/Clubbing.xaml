@@ -18,7 +18,7 @@
         <Ellipse Width="35" Height="35" Fill="White" Stroke="Transparent" Canvas.Left="350" Canvas.Top="23"/>
         <TextBlock Name="NumDrinks" Foreground="Green" Canvas.ZIndex="4" FontSize="20" FontFamily="Arial" Text="0" Canvas.Left="363" Canvas.Top="29"/>
         <Border Name="Order" Background="#496E82" Height="47" Width="311" Canvas.Left="51" Canvas.Top="74" Tapped="Order_Tapped">
-            <TextBlock FontFamily="Arial" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center">Bestellung</TextBlock>
+            <TextBlock FontFamily="Arial" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center">Pay</TextBlock>
         </Border>
 
         <ListView Foreground="Black" Canvas.Left="25" Canvas.Top="142" Height="419" Width="365">
